@@ -1,0 +1,79 @@
+/**
+ * Page
+ * ---------------------------------------------------------------------------
+  * - Begone
+* */
+
+.container.page {
+
+	background-color: white;
+	margin-bottom: $double-whitespace;
+
+	h1 {
+
+		font-size: $h1;
+		padding: 0;
+		text-align: left;
+
+	}
+
+	h2 {
+
+		font-size: $h2;
+
+	}
+
+	h3 {
+
+		font-size: $h3;
+
+	}
+
+	p {
+
+		ul {
+
+			margin: $default-whitespace 0;
+			padding: 0 0 0 $default-whitespace;
+
+		}	
+
+	}
+
+	ul {
+	
+		list-style-type: circle;
+		margin: $default-whitespace 0;
+		padding: 0 0 0 $default-whitespace;
+
+		li {
+
+			line-height: 175%;
+
+		}
+
+	}	
+
+	.item-page.default,
+	.item-page.item-niet-gevonden {
+
+		padding: 4rem;
+
+		@media #{$screen-sm} {
+
+			padding: $default-whitespace;
+
+		}		
+
+	}
+
+}
+
+
+/* ===== Begone ===== */
+
+.container.page.begone {
+
+	background-color: rgba( white, .75 );
+
+}

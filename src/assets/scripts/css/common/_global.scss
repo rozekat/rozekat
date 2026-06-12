@@ -1,0 +1,364 @@
+/**
+* Default styles
+* --------------------------------------------------------------------------- 
+**/
+
+/* ===== HTML =====*/
+
+html {
+
+	font-size: $nullbeta-default-size;
+
+	* {
+
+		position: relative;
+		box-sizing: border-box;
+
+	} 	
+
+}
+
+
+/* ===== Body ===== */
+
+body {
+	
+	font-family: $nullbeta-font;
+	background-attachment: fixed;	
+	background-color: $nullbeta-bgcolor;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	@include box-sizing( border-box );
+	color: $grey-dark;
+
+}
+
+body.custom-background {
+	
+	background-size: cover!important;
+	
+}
+
+
+body.custom-background {
+	
+	background-size: cover!important;
+	
+}
+
+
+
+/* ===== Links ===== */
+
+a {
+
+	color: $grey-dark;
+	text-decoration: underline;
+
+	&:hover {
+
+		color: $pink;
+					
+	}
+
+	&.button {
+
+		@extend %button;
+		background-color: $pink-meow;
+		padding: 1rem;
+
+	}
+	
+}
+
+*:focus {
+
+    outline: none;
+
+}
+
+*::-moz-focus-outer {
+
+	border: 0;
+
+}
+
+
+/* ===== Headings ===== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+	@extend %wrap;
+	
+}
+
+h1 {
+		
+}
+
+
+h2 {
+		
+}
+
+h3 {
+	
+}
+
+
+/* ===== Texts ===== */
+
+p {	
+
+	@extend %wrap;
+	line-height: 175%;
+
+	&.positive-highlight {
+
+		background: lighten( $green-light, 10% );
+		border: 1px dotted $green-dark;
+		color: black;
+		font-style: italic;
+		font-weight: 800;
+		padding: $default-whitespace;
+
+	}
+
+	&.footnote {
+
+		font-size: $small-font;
+
+		&:before {
+
+			background: $grey-dark;
+			content: '';
+			display: block;
+			height: 1px;
+			margin: $double-whitespace 0 $half-whitespace 0;
+			width: 150px;
+
+		}
+
+	}
+	
+}
+
+
+.text-start {
+
+	text-align: left;
+
+}
+
+/* ===== horizontal rule ===== */
+
+hr {
+	
+	border-bottom: none!important;
+	border-top: 1px solid!important;
+	color: $grey-light;
+	margin: $double-whitespace 0;
+
+}
+
+
+/* ===== Tables ===== */
+
+table {
+
+	@extend %table;
+
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+	table-layout: fixed;
+
+	tr {
+		
+		th {
+						
+		}
+		
+		th,
+		td {
+		}
+		
+	}
+
+}
+
+
+/* ===== Blockquotes and quotes ===== */
+
+blockquote {
+
+	background-color: $nullbeta-bgcolor;
+	border: 1px solid $grey-light;
+	display: inline-block;
+	padding: $double-whitespace;
+	width: 100%;
+
+	p {
+
+		margin: $default-whitespace 0;
+
+		&:first-of-type {
+
+			margin-top: 0;
+
+		}
+
+		&:last-of-type {
+
+			margin-bottom: 0;
+
+		}
+
+	}
+	
+}
+
+pre {
+	
+}
+
+
+/* ===== Lists ===== */
+
+ul {
+	
+	li {
+		
+		@extend %wrap;
+		
+	}
+	
+}
+
+ol {
+	
+	li {
+		
+		@extend %wrap;
+
+	}
+	
+}
+
+dl {
+	
+	dt {
+				
+	}
+	
+	dd {
+			
+	}
+	
+}
+
+
+input:not([type="radio"]):not([type="checkbox"]) {
+		
+}
+
+
+/* ===== supportive styles ====== */
+
+.extra-padding-bottom {
+
+	padding-bottom: $default-whitespace;
+
+}
+
+.extra-padding-bottom-double {
+
+	padding-bottom: $double-whitespace;
+
+}
+
+.no-padding {	   
+
+   padding: 0!important;	   
+
+}	
+
+.no-margin {	   
+
+   margin: 0!important;	   
+
+}	
+
+.no-padding-left {
+
+	padding-left: 0!important; 
+
+}
+
+.no-padding-right {
+	
+	padding-right: 0!important; 
+
+}
+
+.upper {
+	
+	text-transform: uppercase;
+	
+}
+
+.button {
+	
+	@extend %button;
+	
+}
+	
+	
+/**
+ * Media
+ * --------------------------------------------------------------------------- */
+
+/* ===== Embeds ===== */
+
+object,
+embed,
+iframe,
+video { 
+	
+	max-width: 100%; 
+	width: 100%;
+
+}
+
+span.youtube,
+span.you-tube,
+span.vimeo {
+	
+	clear: both;
+	display: block;
+	position: relative;
+	height: 0; 
+    overflow: hidden;
+	text-align: center;
+    padding-bottom: 56.25%;
+    padding-top: $double-whitespace; 
+     
+    iframe,
+	embed,
+	object {
+		
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		
+	}
+   
+}

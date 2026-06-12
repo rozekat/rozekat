@@ -1,0 +1,34 @@
+/**
+ * TAGS
+ * --------------------------------------------------------------------------- 
+**/
+
+.container-tags {
+	
+	display: block;
+	margin: $double-whitespace 0;
+	text-align: center;
+	
+	a {
+		
+		background: $nullbeta-bgcolor;
+		border: 1px solid $grey-light;
+		color: $grey-dark;
+		display: inline-block;
+		font-family: $nullbeta-font;
+		margin: .25rem;
+		padding: $half-whitespace $default-whitespace;
+		text-decoration: none;
+		@include border-radius( .25rem );
+		@include nullbeta-transition( background, 300ms );
+	
+		&:hover {
+			
+			border-color: $red-dark;
+			color: $red-dark;
+			
+		}
+		
+	}
+	
+}

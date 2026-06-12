@@ -1,0 +1,208 @@
+/**
+* Media Queries - print
+* --------------------------------------------------------------------------- 
+**/
+
+@media print {
+	
+	* {
+	  
+		text-shadow: none !important; 
+		color: #000 !important;
+		background: transparent !important;
+		box-shadow: none !important;
+	
+	}
+
+	a,
+	a:visited {
+	  
+		text-decoration: underline; 
+	
+	}
+
+	a[href]:after {
+	  
+		content: " (" attr(href) ")";
+	 
+	}
+
+	abbr[title]:after {
+	  
+		content: " (" attr(title) ")";
+	 
+	}
+    
+	.ir a:after,
+	a[href^="javascript:"]:after,
+	a[href^="#"]:after {
+	  
+		content: ""; 
+	
+	}
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid; }
+
+	thead {
+	  
+		display: table-header-group;
+		/* h5bp.com/t */ 
+	
+	}
+
+	tr,
+	img {
+	  
+		page-break-inside: avoid; 
+	
+	}
+	
+	img {
+	  
+		max-width: 100% !important; 
+	
+	}
+
+	@page {
+	  
+		margin: 0.5cm; 
+	
+	}
+    
+	p,
+	h2,
+	h3 {
+	  
+		orphans: 3;
+		widows: 3; 
+	
+	}
+
+	h2,
+	h3 {
+	  
+		page-break-after: avoid; 
+	
+	}
+
+	nav,
+	.header,
+	#header,
+	.paginatitel,
+	.navigatie,
+	#container-nav,
+	.subnav,
+	.lijst-social-media,
+	.scroll-naar-boven,
+	#scroll-to-top,
+	.grid-30,
+	.container-cta-no-ads,
+	.container-cta-kleurpotloden-stiften,
+	#container-lijst-willekeurige-items,
+	.container-deel-je-kleurplaat,
+	#lijst-lvk-artikelen,
+	#cookie-law-info-bar,
+	#cookie-law-info-again,
+	#footer,
+	.footer,
+	/* === Vorige / volgende kleurplaat knop */
+	.vorige-kleurplaat,
+	.volgende-kleurplaat,
+	/* === Onderdelen raster kleurplaat */
+	#item-intro.raster,
+	.kleur-sample,
+	#link-print-raster,
+	#reacties,
+	#spieken-intro,
+	#toggle-raster,
+	/* === browser extension Ghostery === */
+	#ghostery,
+	#ghostery-purple-box {
+
+		display: none!important;
+
+	}
+
+	#container-preview {
+
+		height: initial;
+		margin: unset;
+		max-height: reset;
+		max-width: initial;	
+		min-height: 100vh;
+		min-width: 100vw;	
+		padding: unset;
+		width: initial;
+
+
+	}
+		
+	.kleurplaat:after{
+	  
+		border-top: 1px solid $grey;
+		clear: both; 
+		color: $grey-light;
+		content: "Leukvoorkids.nl | Creatieve ideetjes. Kleurplaten. Tips & nieuws. Wallpapers.";
+		display: block;
+		margin: $double-whitespace auto 0 auto;
+		padding-top: $double-whitespace;
+		text-align: center;
+		width: 100%;
+	
+	} 
+
+	.raster-pagebreak:before {
+	  
+		border-top: 1px solid $grey;
+		clear: both; 
+		color: $grey-light;
+		content: "Leukvoorkids.nl | Creatieve ideetjes. Kleurplaten. Tips & nieuws. Wallpapers.";
+		display: block;
+		margin: $double-whitespace auto 0 auto;
+		padding-top: $double-whitespace;
+		text-align: center;
+		width: 100%;
+	
+	} 
+
+	.print-only {
+
+		display: block;
+
+	}
+
+	#instructies {
+
+		text-align: left;
+
+	}
+
+	h3 {
+
+		&.print-only {
+
+			font-family: $nullbeta-header-boogaloo;
+			font-size: 2.5rem!important;
+			letter-spacing: 1px;
+			margin: $double-whitespace auto;
+			padding-bottom: $default-whitespace;
+			text-align: center;
+			text-transform: uppercase;
+			width: 100%;
+
+		}
+
+	}	
+
+    .raster-pagebreak,
+    .pagebreak {
+
+        clear: both;
+        page-break-after: always;
+
+    }		
+    
+}

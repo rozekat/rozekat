@@ -1,0 +1,200 @@
+#grid {
+
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: auto auto 1fr;
+	// grid-template-rows: auto;
+	grid-template-areas: "header header header"
+						 "main main main"
+						 "footer footer footer";
+	min-height: 100vh;
+	width: 100%;
+
+}
+
+#grid-banned,
+#grid-offline {
+
+	align-items: center;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr;
+	grid-template-areas: "main";
+	height: 100vh;
+	justify-items: center;
+
+	a {
+
+		display: block;
+		text-align: center;
+
+	}
+
+	.container {
+
+		&.page {
+
+			margin: 2rem 0;
+			padding: 2rem;
+			@include nullbeta-border-radius( .5rem );
+
+			.item-page {
+
+
+				padding: 1rem;
+				text-align: center;
+
+				h1 {
+
+					text-align: center;
+
+				}
+
+				p {
+
+
+					a {
+
+						display: inline;
+
+					}
+
+				}
+
+			}
+
+			@media #{$screen-xsm} {
+
+				margin: 1rem;
+				width: auto;
+
+				.item-page {
+
+					h1, 
+					p {
+
+
+						text-align: left;
+
+					}
+
+				}
+
+			}	
+
+		}
+
+	}
+
+	@media #{$screen-xsm} {
+
+		#logo {
+
+			margin: auto 1rem;
+
+			img {
+
+				max-width: 100%;
+				width: auto;
+
+			}
+
+		}
+
+	}
+
+}
+
+#header {
+
+	display: grid;
+	grid-area: header;
+	grid-template-columns: 1fr repeat( 2, minmax( $nullbeta-masonry, #{$nullbeta-container-width * 0.5} ) ) 1fr;
+	grid-template-rows: auto;
+	grid-template-areas: "header-ad header-ad header-ad header-ad"
+	                     "menu menu menu menu"
+	                     "logo logo logo logo"
+	                     "branding branding branding branding";
+
+	width: 100%;
+	z-index: 1021;
+
+	@media #{$screen-sm} {
+
+		grid-template-columns: 1fr;
+		grid-template-areas: "header-ad"
+		                     "menu"
+		                     "logo"
+		                     "branding";
+		                     // "breadcrumbs"
+		                     // "search";
+		position: relative;
+		z-index: auto;
+
+	}		                     
+
+}
+
+#main {
+	
+	grid-area: main;
+	padding-top: $double-whitespace;
+
+}
+
+#footer {
+
+	align-self: end;
+	display: grid;
+	grid-area: footer;
+	grid-template-columns: 1fr minmax( $nullbeta-masonry, $nullbeta-container-width ) 1fr;
+	grid-template-rows: auto;
+	grid-template-areas: "footermenu footermenu footermenu"
+						 "footersupport footersupport footersupport"
+						 "... footerwidgets ..."
+						 "... ratings ...";					 
+
+}
+
+#footer-nav {
+
+	grid-area: footermenu;
+
+}
+
+
+
+
+#container-logo {
+
+	grid-area: logo;
+
+}
+
+#container-branding {
+
+	grid-area: branding;
+
+}
+
+#container-breadcrumbs {
+
+	align-self: center;
+	grid-area: breadcrumbs;
+	padding: $double-whitespace 0;
+
+	@media #{$screen-sm} {
+
+		justify-self: center;
+		padding: $default-whitespace;
+
+	}		
+
+}
+
+
+#container-nav {
+
+	grid-area: menu;
+
+}

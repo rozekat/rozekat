@@ -1,0 +1,48 @@
+h1 {
+	
+	font-family: $nullbeta-header;
+	font-size: $h1;
+	font-weight: 800;
+	
+}
+
+h2 {
+	
+	color: $grey-dark;
+	font-family: $nullbeta-header;
+	font-size: $h2;
+	font-weight: 600;
+	
+}
+
+h3 {
+
+	font-size: $h3;
+	font-weight: 600;
+
+}
+
+h4,
+h5,
+h6 {
+
+	font-size: $h3;
+	font-weight: 600;
+
+}
+
+@media #{$screen-xsm} {
+
+	h1 {
+
+		font-size: $h1-xsm;
+
+	}	
+
+	h2 {
+
+		font-size: $h2-xsm;
+
+	}
+
+}
