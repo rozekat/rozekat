@@ -1,20 +1,13 @@
 User-agent: *
 Disallow: /
 
-User-agent: Googlebot
-Disallow: /
-
-User-agent: Googlebot-Image
-Disallow: /
-
-User-agent: Mediapartners-Google
-Disallow: /
-
-User-agent: Bingbot
-Disallow: /
-
 User-agent: ia_archiver
 Disallow: /
 
 User-agent: archive.org_bot
 Disallow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+Sitemap: https://hansrochat.nl/sitemap.xml
